@@ -2,9 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'gp-root',
-  templateUrl: './app.component.html',
+  template: `
+    <div><h1>{{titulo}}</h1></div>
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  titulo = 'Angular: Iniciando';
+  titulo: string = 'Angular: Iniciando';
 }
