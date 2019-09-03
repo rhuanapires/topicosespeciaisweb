@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        Lista de Produtos
+        {{tituloPagina}}
     </div>
     <div class="card-body">
         <div class="row">
@@ -15,7 +15,8 @@
             </div>
         </div>
         <div class="table-responsive">
-            <table class="table">
+            <table class="table" 
+                *ngIf='produtos && produtos.length'>
                 <thead>
                     <tr>
                         <th>
@@ -31,7 +32,14 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+                    <tr *ngFor='let produto of produtos'>
+                        <td></td>
+                        <td>{{produto.nomeProduto}}</td>
+                        <td>{{produto.codigoProduto}}</td>
+                        <td>{{produto.dataLancamento}}</td>
+                        <td>{{produto.preco}}</td>
+                        <td>{{produto.rating}}</td>                  
+                    </tr>
                 </tbody>
             </table>
         </div>
