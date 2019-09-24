@@ -6,6 +6,10 @@ import { Component } from '@angular/core';
 })
 export class ListaProdutosComponent {
     tituloPagina: string = 'Lista de Produtos';
+    larguraImagem: number = 50;
+    margemImagem: number = 2;
+    exibirImagem: boolean = false;
+    filtroLista: string = 'carrinho';
     produtos: any[] = 
     [
         {
@@ -16,7 +20,7 @@ export class ListaProdutosComponent {
           "descricao": "Leaf rake with 48-inch wooden handle.",
           "preco": 19.95,
           "rating": 3.2,
-          "urlImagem": "assets/images/leaf_rake.png"
+          "urlImagem": "assets/imagens/leaf_rake.png"
         },
         {
           "idProduto": 2,
@@ -26,7 +30,7 @@ export class ListaProdutosComponent {
           "descricao": "15 gallon capacity rolling garden cart",
           "preco": 32.99,
           "rating": 4.2,
-          "urlImagem": "assets/images/garden_cart.png"
+          "urlImagem": "assets/imagens/garden_cart.png"
         },
         {
           "idProduto": 5,
@@ -36,7 +40,7 @@ export class ListaProdutosComponent {
           "descricao": "Curved claw steel hammer",
           "preco": 8.9,
           "rating": 4.8,
-          "urlImagem": "assets/images/hammer.png"
+          "urlImagem": "assets/imagens/hammer.png"
         },
         {
           "idProduto": 8,
@@ -46,7 +50,7 @@ export class ListaProdutosComponent {
           "descricao": "15-inch steel blade hand saw",
           "preco": 11.55,
           "rating": 3.7,
-          "urlImagem": "assets/images/saw.png"
+          "urlImagem": "assets/imagens/saw.png"
         },
         {
           "idProduto": 10,
@@ -56,7 +60,11 @@ export class ListaProdutosComponent {
           "descricao": "Standard two-button video game controller",
           "preco": 35.95,
           "rating": 4.6,
-          "urlImagem": "assets/images/xbox-controller.png"
+          "urlImagem": "assets/imagens/xbox-controller.png"
         }
     ]
+
+    alternarImagem(): void {
+      this.exibirImagem = !this.exibirImagem;
+    }
 }
