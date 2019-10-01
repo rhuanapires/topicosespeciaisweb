@@ -1,52 +1,52 @@
 [
   {
-    "productId": 1,
-    "productName": "Leaf Rake",
-    "productCode": "GDN-0011",
-    "releaseDate": "March 19, 2019",
-    "description": "Leaf rake with 48-inch wooden handle.",
-    "price": 19.95,
-    "starRating": 3.2,
-    "imageUrl": "assets/images/leaf_rake.png"
+    "produtoId": 1,
+    "nomeProduto": "Ancinho",
+    "codigoProduto": "GDN-0011",
+    "dataLancamento": "19 de Março, 2016",
+    "descricao": "Ancinho com cabo de madeira de 48 polegadas.",
+    "preco": 19.95,
+    "rating": 3.2,
+    "urlImagem": "https://openclipart.org/image/300px/svg_to_png/26215/Anonymous_Leaf_Rake.png"
   },
   {
-    "productId": 2,
-    "productName": "Garden Cart",
-    "productCode": "GDN-0023",
-    "releaseDate": "March 18, 2019",
-    "description": "15 gallon capacity rolling garden cart",
-    "price": 32.99,
-    "starRating": 4.2,
-    "imageUrl": "assets/images/garden_cart.png"
+    "produtoId": 2,
+    "nomeProduto": "Carrinho de Jardim",
+    "codigoProduto": "GDN-0023",
+    "dataLancamento": "18 de março, 2016",
+    "descricao": "Carrinho de Jardim com capacidade de 56 litros",
+    "preco": 32.99,
+    "rating": 4.2,
+    "urlImagem": "https://openclipart.org/image/300px/svg_to_png/58471/garden_cart.png"
   },
   {
-    "productId": 5,
-    "productName": "Hammer",
-    "productCode": "TBX-0048",
-    "releaseDate": "May 21, 2019",
-    "description": "Curved claw steel hammer",
-    "price": 8.9,
-    "starRating": 4.8,
-    "imageUrl": "assets/images/hammer.png"
+    "produtoId": 5,
+    "nomeProduto": "Martelo",
+    "codigoProduto": "TBX-0048",
+    "dataLancamento": "21 de maio, 2016",
+    "descricao": "Martelo de aço de garra curva",
+    "preco": 8.9,
+    "rating": 4.8,
+    "urlImagem": "https://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
   },
   {
-    "productId": 8,
-    "productName": "Saw",
-    "productCode": "TBX-0022",
-    "releaseDate": "May 15, 2019",
-    "description": "15-inch steel blade hand saw",
-    "price": 11.55,
-    "starRating": 3.7,
-    "imageUrl": "assets/images/saw.png"
+    "produtoId": 8,
+    "nomeProduto": "Serra",
+    "codigoProduto": "TBX-0022",
+    "dataLancamento": "15 de Maio, 2016",
+    "descricao": "Serra de mão com lâmina de aço de 15 polegadas",
+    "preco": 11.55,
+    "rating": 3.7,
+    "urlImagem": "https://openclipart.org/image/300px/svg_to_png/27070/egore911_saw.png"
   },
   {
-    "productId": 10,
-    "productName": "Video Game Controller",
-    "productCode": "GMG-0042",
-    "releaseDate": "October 15, 2018",
-    "description": "Standard two-button video game controller",
-    "price": 35.95,
-    "starRating": 4.6,
-    "imageUrl": "assets/images/xbox-controller.png"
+    "produtoId": 10,
+    "nomeProduto": "Controle de Vídeo Game",
+    "codigoProduto": "GMG-0042",
+    "dataLancamento": "15 de outubro, 2015",
+    "descricao": "Controle de vídeo game padrão com dois botões",
+    "preco": 35.95,
+    "rating": 4.6,
+    "urlImagem": "https://openclipart.org/image/300px/svg_to_png/120337/xbox-controller_01.png"
   }
 ]
