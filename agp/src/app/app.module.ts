@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ListaProdutosComponent } from './produtos/lista-produtos.component';
 import { ConverteParaEspacoPipe } from './shared/converte-para-espaco.pipe';
+import { RatingComponent } from './shared/rating.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListaProdutosComponent,
-    ConverteParaEspacoPipe
+    ConverteParaEspacoPipe,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
