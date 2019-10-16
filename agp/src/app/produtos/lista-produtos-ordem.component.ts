@@ -1,26 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IProduto } from './produtos';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
 
 @Component({
-    selector : 'gp-produtos',
-    templateUrl: './lista-produtos.component.html',
+    selector : 'gp-produtos-ordem',
+    templateUrl: './lista-produtos-ordem.component.html',
     styleUrls:['./lista-produtos.component.css']
 })
-export class ListaProdutosComponent implements OnInit {
+export class ListaProdutosOrdemComponent implements OnInit {
     tituloPagina: string = 'Lista de Produtos';
     larguraImagem: number = 50;
     margemImagem: number = 2;
     exibirImagem: boolean = false;
-    produtosFiltrados: IProduto[];
-    _filtroLista: string;
 
-    get filtroLista() : string {
-      return this._filtroLista;
-    }
-    set filtroLista(valor: string) {
-      this._filtroLista = valor;
-      this.produtosFiltrados = this.filtroLista ? this.executarFiltro(this.filtroLista) : this.produtos;
-    }
     produtos: IProduto[] =
     [
       {
@@ -75,13 +68,11 @@ export class ListaProdutosComponent implements OnInit {
       }
     ]
 
-    constructor() {
-      // Exibe a lista completa
-      this.produtosFiltrados = this.produtos;
-      // Configura o valor inicial do filtro
-      this.filtroLista = 'carrinho';
-    }
+    // Ordenação
+    colunasExibidas: string[] = ['urlImagem', 'nomeProduto', 'codigoProduto', 'dataLancamento', 'preco', 'rating'];
+    fonteDados: MatTableDataSource<IProduto>;
 
+    @ViewChild(MatSort, {static: true}) sort: MatSort;
 
     alternarImagem(): void {
       this.exibirImagem = !this.exibirImagem;
@@ -89,17 +80,8 @@ export class ListaProdutosComponent implements OnInit {
 
     ngOnInit() {
       console.log("Passei por aqui");
+      this.fonteDados = new MatTableDataSource(this.produtos);
+      this.fonteDados.sort = this.sort;
     }
-
-    executarFiltro(filtrarPor: string): IProduto[] {
-      filtrarPor = filtrarPor.toLocaleLowerCase();
-      return this.produtos.filter((produto: IProduto) =>
-        produto.nomeProduto.toLocaleLowerCase().indexOf(filtrarPor) !== -1);
-    }
-
-    onRatingClicado(mensagem: string): void {
-      this.tituloPagina = "Lista de Produtos - " + mensagem;
-    }
-
 
 }

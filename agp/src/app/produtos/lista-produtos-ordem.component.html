@@ -1,0 +1,53 @@
+<div class="card">
+    <div class="card-header">
+        {{tituloPagina}}
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table mat-elevation-z8" mat-table [dataSource] = 'fonteDados' matSort
+                [hidden]='!(produtos && produtos.length)'>
+                <ng-container matColumnDef="urlImagem">
+                  <th mat-header-cell *matHeaderCellDef>
+                    <button class="btn btn-primary"
+                                (click) = 'alternarImagem()'>
+                                {{ exibirImagem ? 'Esconder' : 'Exibir'}} Imagem
+                    </button>
+                  </th>
+                  <td mat-cell *matCellDef="let produto">
+                    <img *ngIf = 'exibirImagem'
+                                [src] = 'produto.urlImagem'
+                                [title] = 'produto.nomeProduto'
+                                [style.width.px] = 'larguraImagem'
+                                [style.margin.px] = 'margemImagem'>
+                  </td>
+                </ng-container>
+                <ng-container matColumnDef="nomeProduto">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+                  <td mat-cell *matCellDef="let produto"> {{produto.nomeProduto}} </td>
+                </ng-container>
+                <ng-container matColumnDef="codigoProduto">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Código </th>
+                  <td mat-cell *matCellDef="let produto"> {{produto.codigoProduto | lowercase | converteParaEspaco:'-'}} </td>
+                </ng-container>
+                <ng-container matColumnDef="dataLancamento">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Data de Lançamento </th>
+                  <td mat-cell *matCellDef="let produto"> {{produto.dataLancamento}} </td>
+                </ng-container>
+                <ng-container matColumnDef="preco">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Preço </th>
+                  <td mat-cell *matCellDef="let produto"> {{produto.preco | currency: 'BRL':'symbol':'1.2-2'}} </td>
+                </ng-container>
+                <ng-container matColumnDef="rating">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Rating de 5 estrelas </th>
+                  <td mat-cell *matCellDef="let produto">
+                      <gp-star [rating] = 'produto.rating' (ratingClicado) = 'onRatingClicado($event)'>
+                      </gp-star>
+                  </td>
+                </ng-container>
+                <tr mat-header-row *matHeaderRowDef="colunasExibidas"></tr>
+                <tr mat-row *matRowDef="let row; columns: colunasExibidas;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
+

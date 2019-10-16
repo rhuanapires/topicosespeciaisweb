@@ -1,3 +1,21 @@
 thead {
     color: #337AB7
 }
+
+table {
+  width: 100%;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.mat-header-cell {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+.mat-cell {
+  font-size: 1rem;
+}
