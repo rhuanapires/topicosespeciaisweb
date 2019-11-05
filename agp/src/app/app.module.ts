@@ -1,15 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatSortModule } from '@angular/material/sort';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { MatSortModule } from "@angular/material/sort";
 
-import { AppComponent } from './app.component';
-import { ListaProdutosComponent } from './produtos/lista-produtos.component';
-import { ConverteParaEspacoPipe } from './shared/converte-para-espaco.pipe';
-import { RatingComponent } from './shared/rating.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatTableModule } from '@angular/material/table';
-import { ListaProdutosOrdemComponent } from './produtos/lista-produtos-ordem.component';
+import { AppComponent } from "./app.component";
+import { ListaProdutosComponent } from "./produtos/lista-produtos.component";
+import { ConverteParaEspacoPipe } from "./shared/converte-para-espaco.pipe";
+import { RatingComponent } from "./shared/rating.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatTableModule } from "@angular/material/table";
+import { ListaProdutosOrdemComponent } from "./produtos/lista-produtos-ordem.component";
+import { ProdutoService } from "./produtos/produto.service";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ListaProdutosOrdemComponent } from './produtos/lista-produtos-ordem.com
     ConverteParaEspacoPipe,
     RatingComponent
   ],
+  providers: [ProdutoService],
   imports: [
     BrowserModule,
     FormsModule,
@@ -28,4 +30,4 @@ import { ListaProdutosOrdemComponent } from './produtos/lista-produtos-ordem.com
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
